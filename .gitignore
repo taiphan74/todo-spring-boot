@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Local outputs ###
+repomix-output.xml
+.DS_Store

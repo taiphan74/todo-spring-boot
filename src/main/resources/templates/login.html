@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Login</title>
+		<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+		<style>
+			:root {
+				--ink: #0f1b2d;
+				--muted: #687180;
+				--paper: #f4efe9;
+				--accent: #1f7a76;
+				--accent-2: #ff8b5b;
+				--card: #ffffff;
+				--shadow: 0 18px 40px rgba(15, 27, 45, 0.12);
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				margin: 0;
+				min-height: 100vh;
+				font-family: "Space Grotesk", system-ui, sans-serif;
+				color: var(--ink);
+				background:
+					radial-gradient(circle at 20% 10%, rgba(31, 122, 118, 0.18), transparent 45%),
+					radial-gradient(circle at 80% 0%, rgba(255, 139, 91, 0.2), transparent 40%),
+					var(--paper);
+				display: grid;
+				place-items: center;
+				padding: 40px 16px;
+			}
+
+			.shell {
+				width: min(980px, 100%);
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: 28px;
+				align-items: center;
+			}
+
+			.hero {
+				padding: 18px 10px;
+			}
+
+			.hero h1 {
+				font-family: "Playfair Display", serif;
+				font-size: clamp(34px, 6vw, 54px);
+				margin: 0 0 12px;
+			}
+
+			.hero p {
+				margin: 0 0 16px;
+				color: var(--muted);
+				max-width: 360px;
+			}
+
+			.stats {
+				display: flex;
+				gap: 18px;
+				flex-wrap: wrap;
+			}
+
+			.stat {
+				background: rgba(255, 255, 255, 0.7);
+				border-radius: 14px;
+				padding: 12px 16px;
+				border: 1px solid rgba(15, 27, 45, 0.08);
+			}
+
+			.card {
+				background: var(--card);
+				border-radius: 24px;
+				box-shadow: var(--shadow);
+				padding: 28px;
+				display: grid;
+				gap: 18px;
+			}
+
+			.card h2 {
+				margin: 0;
+				font-size: 22px;
+			}
+
+			.field {
+				display: grid;
+				gap: 8px;
+			}
+
+			.field label {
+				font-size: 13px;
+				font-weight: 600;
+				color: var(--muted);
+				text-transform: uppercase;
+				letter-spacing: 0.08em;
+			}
+
+			.field input {
+				padding: 12px 14px;
+				border-radius: 12px;
+				border: 1px solid rgba(15, 27, 45, 0.12);
+				font-size: 15px;
+			}
+
+			.actions {
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+			}
+
+			.button {
+				border: none;
+				background: var(--accent);
+				color: white;
+				padding: 12px 16px;
+				border-radius: 14px;
+				font-weight: 600;
+				cursor: pointer;
+				box-shadow: 0 12px 20px rgba(31, 122, 118, 0.3);
+			}
+
+			.link {
+				color: var(--accent-2);
+				text-align: center;
+				text-decoration: none;
+				font-weight: 600;
+			}
+
+			@media (max-width: 720px) {
+				.shell {
+					grid-template-columns: 1fr;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main class="shell">
+			<section class="hero">
+				<h1>Chao mung quay lai.</h1>
+				<p>Dang nhap de quan ly cong viec ca nhan va theo doi tien do moi ngay.</p>
+				<div class="stats">
+					<div class="stat">
+						<strong>03</strong><br />
+						Viec sap hoan thanh
+					</div>
+					<div class="stat">
+						<strong>12</strong><br />
+						Viec dang theo doi
+					</div>
+				</div>
+			</section>
+
+			<section class="card">
+				<h2>Dang nhap</h2>
+				<form class="actions">
+					<div class="field">
+						<label for="email">Email</label>
+						<input id="email" type="email" placeholder="ban@todo.app" />
+					</div>
+					<div class="field">
+						<label for="password">Mat khau</label>
+						<input id="password" type="password" placeholder="••••••••" />
+					</div>
+					<button class="button" type="button">Dang nhap</button>
+					<a class="link" href="/todo">Xem danh sach cong viec</a>
+				</form>
+			</section>
+		</main>
+	</body>
+</html>

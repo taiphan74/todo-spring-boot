@@ -35,3 +35,4 @@ build/
 ### Local outputs ###
 repomix-output.xml
 .DS_Store
+.env
